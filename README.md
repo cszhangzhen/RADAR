@@ -9,9 +9,9 @@ This is a PyTorch implementation of the RADAR algorithm, which is a redundancy-a
 * python3.10
 * pytorch==2.10.0
 * torch-geometric==2.7.0
-* numpy==1.24.4
-* scipy==1.10.1
-* openai==2.14.0
+* numpy==2.2.6
+* scipy==1.15.3
+* openai==2.30.0
 
 ### Project Structure
 
@@ -60,6 +60,7 @@ Download MMLU, HumanEval and GSM8K ect. And put them in different folders.
 ```
 python run_mmlu.py
 
+python run_gsm8k.py
 ```
 ### Citing
 If you find RADAR useful for your research, please consider citing the following paper:
