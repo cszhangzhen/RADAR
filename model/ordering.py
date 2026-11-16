@@ -177,9 +177,9 @@ class DiffusionOrderingNetwork(nn.Module):
         h = self.gat(h, G.edge_index.long().to(self.device), G.edge_attr.long().to(self.device))
 
         if unmasked.numel() > 0:
-            h_unmasked = h[unmasked, :]
             effective_sizes = self.compute_effective_size(G)
             h = h + self.effective_size_weight * effective_sizes.unsqueeze(1)
+            h_unmasked = h[unmasked, :]
 
             # softmax: h over h_not_absorbed
             # make sure values are positive and sum to 1 (for unmasked nodes)
